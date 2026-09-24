@@ -100,6 +100,14 @@
           "bytes": 568776621
         }
       ]
+    },
+    {
+      "id": "interactive-3d-anatomie-verkenner",
+      "title": "Interactieve 3D Anatomie Verkenner",
+      "description": "Duik in het menselijk lichaam met onze revolutionaire 3D-simulator. Draai, zoom en ontleed meer dan 2.200 interactieve lichaamsdelen verspreid over 15 anatomische systemen. Zoek direct naar 3.400+ termen. De ultieme visuele tool voor een razendsnel begrip!",
+      "cover": "covers/interactive-3d-anatomie-verkenner.png",
+      "featured": false,
+      "externalUrl": "https://d-body-viewer.lovable.app"
     }
   ]
 }
