@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
 
-import { releaseDownloadForPath } from "./download-redirects";
+import { inlineMediaHeadersForPath, releaseDownloadForPath } from "./download-redirects";
 
 describe("releaseDownloadForPath", () => {
   test("maps the atlas PDF to its release asset", () => {
@@ -17,5 +17,19 @@ describe("releaseDownloadForPath", () => {
 
   test("does not redirect unrelated paths", () => {
     expect(releaseDownloadForPath("/library/unknown.pdf")).toBeUndefined();
+  });
+
+  test("serves a PDF inline with its real media type", () => {
+    expect(inlineMediaHeadersForPath("/library/files/Wekelijks Studieplan.pdf")).toEqual({
+      "content-disposition": 'inline; filename="Wekelijks.Studieplan.pdf"',
+      "content-type": "application/pdf",
+    });
+  });
+
+  test("serves an URL-encoded PDF path inline", () => {
+    expect(inlineMediaHeadersForPath("/library/files/Wekelijks%20Studieplan.pdf")).toEqual({
+      "content-disposition": 'inline; filename="Wekelijks.Studieplan.pdf"',
+      "content-type": "application/pdf",
+    });
   });
 });

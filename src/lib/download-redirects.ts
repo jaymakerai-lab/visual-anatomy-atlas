@@ -10,10 +10,27 @@ const releaseAssets: Record<string, string> = {
   "materials.zip": "materials.zip",
 };
 
+function filenameFromPath(pathname: string): string | undefined {
+  return decodeURIComponent(pathname).split("/").pop();
+}
+
 export function releaseDownloadForPath(pathname: string): string | undefined {
-  const filename = pathname.split("/").pop();
+  const filename = filenameFromPath(pathname);
   if (filename == null) return undefined;
 
   const assetName = releaseAssets[filename];
   return assetName == null ? undefined : `${RELEASE_BASE_URL}/${assetName}`;
+}
+
+export function inlineMediaHeadersForPath(pathname: string): Record<string, string> | undefined {
+  const filename = filenameFromPath(pathname);
+  if (filename == null) return undefined;
+
+  const assetName = releaseAssets[filename];
+  if (assetName == null || !assetName.endsWith(".pdf")) return undefined;
+
+  return {
+    "content-disposition": `inline; filename="${assetName}"`,
+    "content-type": "application/pdf",
+  };
 }

@@ -1,7 +1,7 @@
 import "./lib/error-capture";
 
 import { consumeLastCapturedError } from "./lib/error-capture";
-import { releaseDownloadForPath } from "./lib/download-redirects";
+import { inlineMediaHeadersForPath, releaseDownloadForPath } from "./lib/download-redirects";
 import { renderErrorPage } from "./lib/error-page";
 
 type ServerEntry = {
@@ -50,6 +50,20 @@ export default {
     try {
       const releaseUrl = releaseDownloadForPath(decodeURIComponent(new URL(request.url).pathname));
       if (releaseUrl != null) {
+        const inlineHeaders = inlineMediaHeadersForPath(new URL(request.url).pathname);
+        if (inlineHeaders != null) {
+          const range = request.headers.get("range");
+          const upstream = await fetch(
+            releaseUrl,
+            range == null ? undefined : { headers: { range } },
+          );
+          const headers = new Headers(upstream.headers);
+          for (const [name, value] of Object.entries(inlineHeaders)) {
+            headers.set(name, value);
+          }
+          return new Response(upstream.body, { headers, status: upstream.status });
+        }
+
         return Response.redirect(releaseUrl, 302);
       }
 
