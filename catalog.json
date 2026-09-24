@@ -1,0 +1,105 @@
+{
+  "title": "Visuele Atlas Menselijke Anatomie",
+  "subtitle": "Jouw complete digitale bibliotheek met geïllustreerde anatomiegidsen, gerichte oefeningen, flashcards en studiehulpmiddelen.",
+  "accent": "#00A896",
+  "language": "nl",
+  "labels": {
+    "search": "Zoeken in bibliotheek...",
+    "open": "Materiaal openen",
+    "download": "Bestand downloaden",
+    "downloadAll": "Alles downloaden",
+    "collection": "Mijn Collectie",
+    "empty": "Geen studiemateriaal gevonden",
+    "back": "Terug naar collectie",
+    "pages": "pagina's",
+    "files": "bestanden",
+    "close": "Details sluiten"
+  },
+  "products": [
+    {
+      "id": "main-atlas",
+      "title": "Visuele Atlas Menselijke Anatomie",
+      "description": "De complete geïllustreerde hoofdatlas met 300 pagina's aan gedetailleerde studieplaten en actieve invuloefeningen. Behandelt overzichtelijk het skeletstelsel, spierstelsel en alle vitale orgaanstructuren om anatomische verbanden helder te doorgronden.",
+      "cover": "covers/b565d5cc2d13d4b4.svg",
+      "featured": true,
+      "files": [
+        {
+          "title": "Visuele Atlas Menselijke Anatomie",
+          "filename": "Visuele Atlas Menselijke Anatomie.pdf",
+          "href": "https://github.com/jaymakerai-lab/visual-anatomy-atlas/releases/download/v1.0.0/Visuele.Atlas.Menselijke.Anatomie.pdf",
+          "kind": "pdf",
+          "pages": 311,
+          "bytes": 677272033
+        }
+      ]
+    },
+    {
+      "id": "bonus-weekplan",
+      "title": "Wekelijks Studieplan",
+      "description": "Een gestructureerd en herbruikbaar weekrooster om je anatomische studieroutine doeltreffend in te delen. Bevat praktische workflowstappen, overzichtelijke tijdsblokken en handige afvinkvakken om je voortgang per dag bij te houden.",
+      "cover": "covers/98815b4cf8d4fcb9.svg",
+      "featured": false,
+      "files": [
+        {
+          "title": "Wekelijks Studieplan",
+          "filename": "Wekelijks Studieplan.pdf",
+          "href": "https://github.com/jaymakerai-lab/visual-anatomy-atlas/releases/download/v1.0.0/Wekelijks.Studieplan.pdf",
+          "kind": "pdf",
+          "pages": 5,
+          "bytes": 95845
+        }
+      ]
+    },
+    {
+      "id": "bonus-oefeningen",
+      "title": "80 Extra Oefeningen",
+      "description": "Een gerichte oefenbundel met 80 individuele anatomievraagstukken op verschillende niveaus. Ideaal om structuren actief te herkennen en je parate kennis te toetsen via geïllustreerde fill-in opdrachten inclusief complete antwoordsleutels.",
+      "cover": "covers/f144bff6b56790a9.svg",
+      "featured": false,
+      "files": [
+        {
+          "title": "80 Extra Oefeningen",
+          "filename": "80 Extra Oefeningen.pdf",
+          "href": "https://github.com/jaymakerai-lab/visual-anatomy-atlas/releases/download/v1.0.0/80.Extra.Oefeningen.pdf",
+          "kind": "pdf",
+          "pages": 102,
+          "bytes": 212894636
+        }
+      ]
+    },
+    {
+      "id": "bonus-flashcards",
+      "title": "50 Anatomie Flashcards",
+      "description": "Een handige set van 50 kleurgecodeerde flashcards voor onderweg of tussendoor. Elke kaart toont aan de voorzijde een duidelijke illustratie met vaktermen en op de achterzijde de belangrijkste functionele toelichtingen per lichaamssysteem.",
+      "cover": "covers/28a83b84f8e71ec4.svg",
+      "featured": false,
+      "files": [
+        {
+          "title": "50 Anatomie Flashcards",
+          "filename": "50 Anatomie Flashcards.pdf",
+          "href": "https://github.com/jaymakerai-lab/visual-anatomy-atlas/releases/download/v1.0.0/50.Anatomie.Flashcards.pdf",
+          "kind": "pdf",
+          "pages": 94,
+          "bytes": 209546114
+        }
+      ]
+    },
+    {
+      "id": "bump-fysiologie",
+      "title": "Geïllustreerde Menselijke Fysiologie",
+      "description": "Een uitgebreide gids met 150 gedetailleerde illustraties gericht op orgaanwerking en vitale processen. Verdiep je begrip van onder meer het cardiovasculaire stelsel, de ademhaling, spijsvertering en het zenuwstelsel.",
+      "cover": "covers/01d44f113000e7df.svg",
+      "featured": false,
+      "files": [
+        {
+          "title": "Geïllustreerde Menselijke Fysiologie",
+          "filename": "Geïllustreerde Menselijke Fysiologie.pdf",
+          "href": "https://github.com/jaymakerai-lab/visual-anatomy-atlas/releases/download/v1.0.0/Geillustreerde.Menselijke.Fysiologie.pdf",
+          "kind": "pdf",
+          "pages": 231,
+          "bytes": 568776621
+        }
+      ]
+    }
+  ]
+}

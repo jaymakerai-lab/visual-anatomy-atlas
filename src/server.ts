@@ -1,6 +1,7 @@
 import "./lib/error-capture";
 
 import { consumeLastCapturedError } from "./lib/error-capture";
+import { releaseDownloadForPath } from "./lib/download-redirects";
 import { renderErrorPage } from "./lib/error-page";
 
 type ServerEntry = {
@@ -47,6 +48,11 @@ function isH3SwallowedErrorBody(body: string): boolean {
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     try {
+      const releaseUrl = releaseDownloadForPath(decodeURIComponent(new URL(request.url).pathname));
+      if (releaseUrl != null) {
+        return Response.redirect(releaseUrl, 302);
+      }
+
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
       return await normalizeCatastrophicSsrResponse(response);

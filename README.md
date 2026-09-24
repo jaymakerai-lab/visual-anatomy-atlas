@@ -1,8 +1,12 @@
-# Visual Anatomy Atlas
+# Visuele Atlas Menselijke Anatomie
 
-crie um projeto em branco chamado Visuele Atlas Anatomie, vou importar meu projeto aqui
+Digitale bibliotheek met geïllustreerde anatomiegidsen, oefeningen, flashcards en een studieplan.
 
-This project was built with [Lovable](https://lovable.dev).
+This project is connected to [Lovable](https://lovable.dev) and deploys as a TanStack Start application.
+
+## Downloads
+
+The PDFs and the complete archive are intentionally stored as [GitHub Release assets](https://github.com/jaymakerai-lab/visual-anatomy-atlas/releases/tag/v1.0.0), because they exceed GitHub's normal per-file Git limit. The application redirects every library download link to the corresponding release asset, so downloads work in the Lovable deployment without bundling multi-gigabyte files into the app build.
 
 ## Build with Lovable
 
